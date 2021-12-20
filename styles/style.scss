@@ -33,6 +33,7 @@ header {
 .container {
   margin: 0px auto;
   max-width: 924px;
+  padding: 10px;
 }
 
 main {
@@ -135,6 +136,7 @@ main {
     width: 50%;
     border-radius: 15px;
     padding: 60px 40px;
+    padding-bottom: 30px;
     &__text {
       display: flex;
       justify-content: space-between;
@@ -151,6 +153,21 @@ main {
       }
       &__money {
         @include font(36px, 36px, $bcyan, 700);
+      }
+    }
+    &__button {
+      margin-top: 90px;
+      padding: 18px 135px;
+      border: none;
+      background-color: $bia;
+      border-radius: 5px;
+      color: $biac;
+      @include font(15px, 15px, $vdcyan, 700);
+      &--active {
+        background-color: $bcyan;
+        &:hover {
+          background-color: $hover;
+        }
       }
     }
   }

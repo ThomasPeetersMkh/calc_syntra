@@ -221,6 +221,7 @@ header h1::after {
 .container {
   margin: 0px auto;
   max-width: 924px;
+  padding: 10px;
 }
 
 main {
@@ -320,6 +321,7 @@ main .res {
   width: 50%;
   border-radius: 15px;
   padding: 60px 40px;
+  padding-bottom: 30px;
 }
 main .res__text {
   display: flex;
@@ -350,6 +352,25 @@ main .res__text__money {
   line-height: 36px;
   color: #26c0ab;
   font-weight: 700;
+}
+main .res__button {
+  margin-top: 90px;
+  padding: 18px 135px;
+  border: none;
+  background-color: #0d686d;
+  border-radius: 5px;
+  color: #035c62;
+  font-family: "Space Mono";
+  font-size: 15px;
+  line-height: 15px;
+  color: #00494d;
+  font-weight: 700;
+}
+main .res__button--active {
+  background-color: #26c0ab;
+}
+main .res__button--active:hover {
+  background-color: #9fe8df;
 }
 
 /*# sourceMappingURL=style.css.map */
