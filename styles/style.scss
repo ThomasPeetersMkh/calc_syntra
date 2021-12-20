@@ -1,0 +1,54 @@
+@use "./base/reset";
+@use "./base/fonts" as *;
+@use "./base/variables" as *;
+@use "./icons/icons";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Mono";
+  background-color: $bg;
+}
+
+header {
+  padding-top: 160px;
+  margin-bottom: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    &::after {
+      content: "\e902";
+      font-family: icomoon;
+      color: $vdcyan;
+      font-size: 60px;
+    }
+  }
+}
+
+.container {
+  margin: 0px auto;
+  max-width: 924px;
+}
+
+main {
+  background-color: $app;
+  min-height: 100px;
+  border-radius: 20px;
+  border-left: $dgcyan2 solid 2px;
+  border-right: $dgcyan2 solid 2px;
+  padding: 32px;
+  padding-left: 48px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 48px;
+  .calculator {
+    grid-row: 1/2;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 48px;
+  }
+}

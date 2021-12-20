@@ -1,0 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+@mixin font($fs: 13px, $lh: 13px, $c) {
+  font-family: "Space Mono";
+  font-size: $fs;
+  line-height: $lh;
+  color: $c;
+}
