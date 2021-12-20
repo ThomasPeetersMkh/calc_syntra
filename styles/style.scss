@@ -157,7 +157,9 @@ main {
     }
     &__button {
       margin-top: 90px;
-      padding: 18px 135px;
+      padding-top: 18px;
+      padding-bottom: 18px;
+      width: 100%;
       border: none;
       background-color: $bia;
       border-radius: 5px;
@@ -170,5 +172,30 @@ main {
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 910px) {
+  header {
+    padding-top: 50px;
+  }
+  main {
+    flex-direction: column;
+  }
+  main .calc {
+    width: 100%;
+  }
+  main .res {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    padding: 0px;
+  }
+  main {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
   }
 }
