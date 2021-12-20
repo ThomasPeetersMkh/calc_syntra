@@ -6,7 +6,7 @@ icomoon.io => geplaatst in styles/icons => [icomoon.io](https://icomoon.io)
 
 ## deployed site
 
-[fooi calculator](calc-thomas-peeters.surge.sh)
+[fooi calculator](https://calc-thomas-peeters.surge.sh/)
 
 ## challenges
 
