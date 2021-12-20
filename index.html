@@ -35,13 +35,29 @@
                 <div class="calc__number">
                     <div class="calc__number__titles">
                         <h2>Number of People</h2>
-                        <h2 class="calc__number__titles--error"></h2>
+                        <h2 class="calc__number__titles--error">Can't be zero</h2>
                     </div>
                     <i class="calc__number__i"></i>
-                    <input type="text" class="calc__number__input" placeholder="0">
+                    <input type="text" class="calc__number__input calc__number__input--error" placeholder="0">
                 </div>
             </div>
-            <div class="results"></div>
+            <div class="res">
+                <div class="res__text">
+                    <div class="res__text__static">
+                        <h2>Tip Amount</h2>
+                        <p>/ person</p>
+                    </div>
+                    <p class="res__text__money">$0.00</p>
+                </div>
+                <div class="res__text">
+                    <div class="res__text__static">
+                        <h2>Total</h2>
+                        <p>/ person</p>
+                    </div>
+                    <p class="res__text__money">$0.00</p>
+                </div>
+                <button class="res__button">RESET</button>
+            </div>
         </main>
     </div>    
 </body>

@@ -47,7 +47,8 @@ main {
   justify-content: space-between;
   gap: 48px;
   .calc {
-    grid-row: 1/2;
+    padding-top: 18px;
+    padding-bottom: 16px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -100,6 +101,16 @@ main {
       }
     }
     &__number {
+      &__titles {
+        display: flex;
+        justify-content: space-between;
+        &--error {
+          color: $error;
+          .calc__number__input {
+            border: $error solid 1px;
+          }
+        }
+      }
       &__i {
         position: absolute;
         padding-top: 12px;
@@ -117,6 +128,30 @@ main {
     }
     h2 {
       margin-bottom: 10px;
+    }
+  }
+  .res {
+    background-color: $vdcyan;
+    width: 50%;
+    border-radius: 15px;
+    padding: 60px 40px;
+    &__text {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      &__static {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding-top: 3px;
+        @include font(16px, 16px, white, 400);
+        p {
+          @include font(13px, 13px, $dgcyan1, 400);
+        }
+      }
+      &__money {
+        @include font(36px, 36px, $bcyan, 700);
+      }
     }
   }
 }

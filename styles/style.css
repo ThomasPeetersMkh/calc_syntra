@@ -236,7 +236,8 @@ main {
   gap: 48px;
 }
 main .calc {
-  grid-row: 1/2;
+  padding-top: 18px;
+  padding-bottom: 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -290,6 +291,16 @@ main .calc__select__values__button--active {
   background-color: #26c0ab;
   color: #00494d;
 }
+main .calc__number__titles {
+  display: flex;
+  justify-content: space-between;
+}
+main .calc__number__titles--error {
+  color: #e77364;
+}
+main .calc__number__titles--error .calc__number__input {
+  border: #e77364 solid 1px;
+}
 main .calc__number__i {
   position: absolute;
   padding-top: 12px;
@@ -303,6 +314,42 @@ main .calc__number__i::before {
 }
 main .calc h2 {
   margin-bottom: 10px;
+}
+main .res {
+  background-color: #00494d;
+  width: 50%;
+  border-radius: 15px;
+  padding: 60px 40px;
+}
+main .res__text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+main .res__text__static {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 3px;
+  font-family: "Space Mono";
+  font-size: 16px;
+  line-height: 16px;
+  color: white;
+  font-weight: 400;
+}
+main .res__text__static p {
+  font-family: "Space Mono";
+  font-size: 13px;
+  line-height: 13px;
+  color: #5e7a7d;
+  font-weight: 400;
+}
+main .res__text__money {
+  font-family: "Space Mono";
+  font-size: 36px;
+  line-height: 36px;
+  color: #26c0ab;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */
