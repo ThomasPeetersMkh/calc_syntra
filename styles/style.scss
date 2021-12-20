@@ -1,6 +1,7 @@
 @use "./base/reset";
 @use "./base/fonts" as *;
 @use "./base/variables" as *;
+@use "./base/extends";
 @use "./icons/icons";
 
 * {
@@ -38,8 +39,8 @@ main {
   background-color: white;
   min-height: 100px;
   border-radius: 20px;
-  border-left: $dgcyan2 solid 2px;
-  border-right: $dgcyan2 solid 2px;
+  border-left: $border solid 2px;
+  border-right: $border solid 2px;
   padding: 32px;
   padding-left: 48px;
   display: flex;
@@ -50,28 +51,72 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    width: 50%;
     gap: 48px;
     @include font;
+    &__bill {
+      &__i {
+        position: absolute;
+        padding-top: 12px;
+        padding-left: 16px;
+        &::before {
+          content: "\e900";
+          font-family: icomoon;
+          color: $placeholder;
+          font-size: 16px;
+        }
+      }
+      &__input {
+        @extend %input;
+      }
+    }
 
     &__select__values {
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
+      &__button {
+        //flex-basis: 115px;
+        width: 115px;
+        flex-grow: 1;
+        border: none;
+        border-radius: 5px;
+        padding: 13px;
+        background-color: $vdcyan;
+        @include font(18px, 18px, white, 700);
+        &:hover {
+          background-color: $hover;
+          color: $vdcyan;
+        }
+        &--custom {
+          background-color: $input;
+          color: $dgcyan1;
+          text-align: center;
+        }
+        &--active {
+          background-color: $bcyan;
+          color: $vdcyan;
+        }
+      }
+    }
+    &__number {
+      &__i {
+        position: absolute;
+        padding-top: 12px;
+        padding-left: 16px;
+        &::before {
+          content: "\e901";
+          font-family: icomoon;
+          color: $placeholder;
+          font-size: 16px;
+        }
+      }
+      &__input {
+        @extend %input;
+      }
     }
     h2 {
       margin-bottom: 10px;
-    }
-    input {
-      border: none;
-      border-radius: 5px;
-      background-color: $input;
-      padding: 5px;
-      @include font(18px, 18px, $vdcyan, 700);
-      text-align: right;
-      &::placeholder {
-        @include font(18px, 18px, $placeholder, 700);
-        text-align: right;
-      }
     }
   }
 }

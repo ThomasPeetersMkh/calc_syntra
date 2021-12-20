@@ -16,6 +16,7 @@
             <div class="calc">
                 <div class="calc__bill">
                     <h2>Bill</h2>
+                    <i class="calc__bill__i"></i>
                     <input type="text" class="calc__bill__input" placeholder="0">
                 </div>
                 <div class="calc__select">
@@ -25,11 +26,19 @@
                     <div class="calc__select__values">
                         <button class="calc__select__values__button">5%</button>
                         <button class="calc__select__values__button">10%</button>
-                        <button class="calc__select__values__button">15%</button>
+                        <button class="calc__select__values__button calc__select__values__button--active">15%</button>
                         <button class="calc__select__values__button">25%</button>
                         <button class="calc__select__values__button">50%</button>
-                        <input type="text" class="calc__select__values__button--custom">
+                        <input type="text" class="calc__select__values__button calc__select__values__button--custom" placeholder="Custom">
                     </div>
+                </div>
+                <div class="calc__number">
+                    <div class="calc__number__titles">
+                        <h2>Number of People</h2>
+                        <h2 class="calc__number__titles--error"></h2>
+                    </div>
+                    <i class="calc__number__i"></i>
+                    <input type="text" class="calc__number__input" placeholder="0">
                 </div>
             </div>
             <div class="results"></div>

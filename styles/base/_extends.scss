@@ -1,0 +1,17 @@
+@use "./variables" as *;
+@use "./fonts" as *;
+
+%input {
+  border: none;
+  border-radius: 5px;
+  background-color: $input;
+  width: 100%;
+  padding: 5px;
+  padding-left: 30px;
+  @include font(18px, 18px, $vdcyan, 700);
+  text-align: right;
+  &::placeholder {
+    @include font(18px, 18px, $placeholder, 700);
+    text-align: right;
+  }
+}

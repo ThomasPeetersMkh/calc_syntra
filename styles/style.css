@@ -134,6 +134,29 @@ table {
   border-spacing: 0;
 }
 
+main .calc__bill__input, main .calc__number__input {
+  border: none;
+  border-radius: 5px;
+  background-color: #f4fafa;
+  width: 100%;
+  padding: 5px;
+  padding-left: 30px;
+  font-family: "Space Mono";
+  font-size: 18px;
+  line-height: 18px;
+  color: #00494d;
+  font-weight: 700;
+  text-align: right;
+}
+main .calc__bill__input::placeholder, main .calc__number__input::placeholder {
+  font-family: "Space Mono";
+  font-size: 18px;
+  line-height: 18px;
+  color: #a1b9b9;
+  font-weight: 700;
+  text-align: right;
+}
+
 @font-face {
   font-family: "icomoon";
   src: url("icons/fonts/icomoon.eot?6i6od1");
@@ -204,8 +227,8 @@ main {
   background-color: white;
   min-height: 100px;
   border-radius: 20px;
-  border-left: #7f9c9f solid 2px;
-  border-right: #7f9c9f solid 2px;
+  border-left: #bbdfdd solid 2px;
+  border-right: #bbdfdd solid 2px;
   padding: 32px;
   padding-left: 48px;
   display: flex;
@@ -217,6 +240,7 @@ main .calc {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  width: 50%;
   gap: 48px;
   font-family: "Space Mono";
   font-size: 13px;
@@ -224,33 +248,61 @@ main .calc {
   color: #5e7a7d;
   font-weight: 700;
 }
+main .calc__bill__i {
+  position: absolute;
+  padding-top: 12px;
+  padding-left: 16px;
+}
+main .calc__bill__i::before {
+  content: "\e900";
+  font-family: icomoon;
+  color: #a1b9b9;
+  font-size: 16px;
+}
 main .calc__select__values {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
 }
-main .calc h2 {
-  margin-bottom: 10px;
-}
-main .calc input {
+main .calc__select__values__button {
+  width: 115px;
+  flex-grow: 1;
   border: none;
   border-radius: 5px;
-  background-color: #f4fafa;
-  padding: 5px;
+  padding: 13px;
+  background-color: #00494d;
   font-family: "Space Mono";
   font-size: 18px;
   line-height: 18px;
-  color: #00494d;
+  color: white;
   font-weight: 700;
-  text-align: right;
 }
-main .calc input::placeholder {
-  font-family: "Space Mono";
-  font-size: 18px;
-  line-height: 18px;
+main .calc__select__values__button:hover {
+  background-color: #9fe8df;
+  color: #00494d;
+}
+main .calc__select__values__button--custom {
+  background-color: #f4fafa;
+  color: #5e7a7d;
+  text-align: center;
+}
+main .calc__select__values__button--active {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+main .calc__number__i {
+  position: absolute;
+  padding-top: 12px;
+  padding-left: 16px;
+}
+main .calc__number__i::before {
+  content: "\e901";
+  font-family: icomoon;
   color: #a1b9b9;
-  font-weight: 700;
-  text-align: right;
+  font-size: 16px;
+}
+main .calc h2 {
+  margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
