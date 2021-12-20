@@ -105,16 +105,10 @@ main {
       &__titles {
         display: flex;
         justify-content: space-between;
-        &--error {
-          color: $error;
-          .calc__number__input {
-            border: $error solid 1px;
-          }
-        }
       }
       &__i {
         position: absolute;
-        padding-top: 12px;
+        padding-top: 14px;
         padding-left: 16px;
         &::before {
           content: "\e901";
@@ -125,6 +119,16 @@ main {
       }
       &__input {
         @extend %input;
+        border: 0px solid wheat;
+      }
+      &--error {
+        .calc__number__titles p::before {
+          content: "Can't be zero";
+          color: $error;
+        }
+        .calc__number__input {
+          border: 2px solid $error;
+        }
       }
     }
     h2 {
@@ -193,9 +197,13 @@ main {
 @media screen and (max-width: 450px) {
   .container {
     padding: 0px;
+    width: 100%;
   }
   main {
+    border: none;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 }
