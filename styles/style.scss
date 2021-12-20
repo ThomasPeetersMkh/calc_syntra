@@ -35,20 +35,43 @@ header {
 }
 
 main {
-  background-color: $app;
+  background-color: white;
   min-height: 100px;
   border-radius: 20px;
   border-left: $dgcyan2 solid 2px;
   border-right: $dgcyan2 solid 2px;
   padding: 32px;
   padding-left: 48px;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
   gap: 48px;
-  .calculator {
+  .calc {
     grid-row: 1/2;
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     gap: 48px;
+    @include font;
+
+    &__select__values {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    h2 {
+      margin-bottom: 10px;
+    }
+    input {
+      border: none;
+      border-radius: 5px;
+      background-color: $input;
+      padding: 5px;
+      @include font(18px, 18px, $vdcyan, 700);
+      text-align: right;
+      &::placeholder {
+        @include font(18px, 18px, $placeholder, 700);
+        text-align: right;
+      }
+    }
   }
 }

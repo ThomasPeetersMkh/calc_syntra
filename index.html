@@ -13,9 +13,23 @@
             <h1></h1>
         </header>
         <main>
-            <div class="calculator">
+            <div class="calc">
                 <div class="calc__bill">
-                    <h2>bill</h2>
+                    <h2>Bill</h2>
+                    <input type="text" class="calc__bill__input" placeholder="0">
+                </div>
+                <div class="calc__select">
+                    <h2>
+                        Select Tip %
+                    </h2>
+                    <div class="calc__select__values">
+                        <button class="calc__select__values__button">5%</button>
+                        <button class="calc__select__values__button">10%</button>
+                        <button class="calc__select__values__button">15%</button>
+                        <button class="calc__select__values__button">25%</button>
+                        <button class="calc__select__values__button">50%</button>
+                        <input type="text" class="calc__select__values__button--custom">
+                    </div>
                 </div>
             </div>
             <div class="results"></div>
