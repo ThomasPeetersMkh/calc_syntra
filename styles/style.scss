@@ -94,6 +94,12 @@ main {
           background-color: $input;
           color: $dgcyan1;
           text-align: center;
+          &:hover {
+            background-color: $input;
+          }
+          &:focus {
+            outline: 2px solid $bcyan;
+          }
         }
         &--active {
           background-color: $bcyan;
@@ -119,7 +125,6 @@ main {
       }
       &__input {
         @extend %input;
-        border: 0px solid wheat;
       }
       &--error {
         .calc__number__titles p::before {
@@ -127,7 +132,7 @@ main {
           color: $error;
         }
         .calc__number__input {
-          border: 2px solid $error;
+          outline: 2px solid $error;
         }
       }
     }
